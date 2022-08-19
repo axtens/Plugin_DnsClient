@@ -51,31 +51,4 @@ namespace DnsClient
             return JsonConvert.SerializeObject(new JSONResponse() { Cargo = (from answer in result.Answers select answer.ToString()).ToArray() });
         }
     }
-    public class DNSBlock
-    {
-        public string Address { get; set; }
-        public string DomainName { get; internal set; }
-        public string RecordClass { get; internal set; }
-        public int InitialTimeToLive { get; internal set; }
-        public int TimeToLive { get; internal set; }
-        public int RawDataLength { get; internal set; }
-        public string RecordType { get; internal set; }
-        public AfsType SubType { get; internal set; }
-        public object Flags { get; internal set; }
-        public string Tag { get; internal set; }
-        public string Value { get; internal set; }
-        public DnsString CanonicalName { get; internal set; }
-        public string OS { get; internal set; }
-        public string Cpu { get; internal set; }
-        public DnsString MadName { get; internal set; }
-        public DnsString MgName { get; internal set; }
-        public DnsString NewName { get; internal set; }
-        public DnsString Exchange { get; internal set; }
-        public object Preference { get; internal set; }
-        public int Order { get; internal set; }
-        public string RegularExpression { get; internal set; }
-        public DnsString Replacement { get; internal set; }
-        public string Services { get; internal set; }
-        public DnsString NSDName { get; internal set; }
-    }
 }
