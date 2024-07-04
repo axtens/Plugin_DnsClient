@@ -28,7 +28,7 @@ namespace DnsClient
                 
             };*/
             
-            LookupClient client = new LookupClient(IPAddress.Parse("8.8.8.8"), IPAddress.Parse("8.8.4.4"));
+            LookupClient client = new(IPAddress.Parse("8.8.8.8"), IPAddress.Parse("8.8.4.4"));
             IDnsQueryResponse result = null;
             try
             {
